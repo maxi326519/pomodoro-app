@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 
 import Nav from './components/Nav.jsx'
-import Home from './components/Home.jsx'
+/* import Home from './components/Home.jsx' */
 import Pomodoro from './components/Pomodoro.jsx'
 
 import './App.css';
