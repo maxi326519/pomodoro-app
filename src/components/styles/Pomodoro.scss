@@ -1,0 +1,140 @@
+@use 'var';
+
+.pomodoro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var.$background;
+
+    font-family: var.$font;
+
+    .circle{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50vh;
+        height: 50vh;
+        border-radius: 50%;
+        box-shadow: 10px 10px 0px 0px #222a;
+        background-color: var.$background-2;
+        outline: 4px solid transparent;
+        color: var.$font-color;
+        transition: 0.2s;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            border: 10px solid var.$background;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            border: 10px solid var.$primary-color;
+       }
+
+        .counter{
+            font-size: 10vh;
+        }
+
+        .text{
+            font-size: 5vh;
+        }
+
+        &:hover{
+            transform: scale(1.04);
+            outline: 4px solid var.$primary-color;
+            transition: 0.2s;
+        }
+    }
+
+    .controls{
+        display: flex;
+        margin: 20px;
+
+        button{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin: 5px 20px;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 4px 4px 0px 0px #222a;
+            background-color: var.$background-2;
+            border: none;
+            transition: 0.2s;
+
+            svg{
+                width: 100%;
+                height: 100%;
+                fill: var.$font-color;
+                transition: 0.2s;
+            }
+
+            .pause{display: none;}
+            
+            &:after{
+                content: "content";
+                position: absolute;
+                top: 100%;
+                padding: 5px 10px;
+                font-weight: bold;
+                border-radius: 15px;
+                box-shadow: 4px 4px 0px 0px var.$primary-color;
+                background-color: var.$background-hover;
+                color: var.$primary-color;
+                opacity: 0%;
+                transition: 0.2s;
+            }
+
+            &:first-child:after{
+                content: 'Play Pause';
+                left: 2px;
+            }
+            &:nth-child(2):after{
+                content: 'Restart';
+                left: 0px;
+            }
+            &:nth-child(3):after{
+                content: 'Settings';
+                left: -4px;
+            }
+
+            &:hover{
+                background-color: var.$background-hover;
+                box-shadow: 4px 4px 0px 0px var.$primary-color;
+                transition: 0.2s;
+
+                &:after{
+                    top: 120%;
+                    opacity: 100%;
+                    transition: 0.2s;
+                }
+
+                svg{
+                    animation: 0.2s ease transition;
+                    fill: var.$primary-color;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes transition{
+    0%{transform: rotate(0)}
+    20%{transform: rotate(-15deg)}
+    80%{ transform: rotate(15deg)}
+    100%{transform: rotate(0)}
+}
