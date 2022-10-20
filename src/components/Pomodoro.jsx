@@ -7,13 +7,13 @@ export default function Pomodoro (){
     const [timer, setState] = useState({minutes: 1, seconds: null, counter: null});
     const [interval, intervalState] = useState({id: null, state: false});
 
-    useEffect(()=>{
-        if(timer.seconds === null){restart()}
-
+    useEffect(()=>{/* 
+        if(timer.seconds === null){restart()} */
+/* 
         if((timer.seconds <= 1) && (interval.state === true)){
             clearInterval(interval.id);
             intervalState({ id: null, state: false});
-        }
+        } */
     }, [timer]);
 
     function start(){
