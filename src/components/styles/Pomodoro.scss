@@ -132,6 +132,11 @@
     }
 }
 
+.block{
+    border: 1px solid red;
+    background-color: blue !important;
+}
+
 @keyframes transition{
     0%{transform: rotate(0)}
     20%{transform: rotate(-15deg)}
