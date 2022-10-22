@@ -1,19 +1,11 @@
-import { Route, Routes } from 'react-router-dom'
-
-import Nav from './components/Nav.jsx'
-/* import Home from './components/Home.jsx' */
-import Pomodoro from './components/Pomodoro.jsx'
+import Timer from './components/Timer.jsx'
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Routes>
-{/*         <Route path="/" element={<Home/>}/> */}
-        <Route path="/" element={<Pomodoro/>}/>
-      </Routes>
+      <Timer/>
     </div>
   );
 }

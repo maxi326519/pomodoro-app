@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-import './styles/Pomodoro.scss'
+import './styles/Timer.scss'
+
 import click from '../assets/audio/click.flac'
 import alarm from '../assets/audio/alert.mp3'
 
