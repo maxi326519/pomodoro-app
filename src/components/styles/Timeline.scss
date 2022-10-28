@@ -1,0 +1,45 @@
+@use 'var';
+
+.time-line{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #222;
+    box-shadow: 0px 10px 20px 5px #0004;
+    
+    div{
+        width: 20px;
+        height: 4px;
+        margin: 10px;
+        border-radius: 2px;
+        background-color: var.$background-2;
+    }
+
+    .time-line__pomodoro{
+        width: 30px;
+        height: 30px;
+        fill: var.$background-2;
+    }
+
+    .time-line__pomodoro:first-child, .time-line__break:nth-child(3){
+        fill: #0c0;
+    }
+
+    div:nth-child(2), div:nth-child(4){
+        background-color: #0c0;
+    }
+
+    .time-line__pomodoro:nth-child(5){
+        fill: var.$primary-color;
+    }
+    
+    .time-line__break{
+        width: 20px;
+        height: 20px;
+        fill: var.$background-2;
+    }
+}

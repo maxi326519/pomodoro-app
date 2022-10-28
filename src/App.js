@@ -1,3 +1,4 @@
+import Timeline from './components/Timeline.jsx';
 import Timer from './components/Timer.jsx'
 
 import './App.css';
